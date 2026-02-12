@@ -1,0 +1,17 @@
+# Конфигурация для sqlc
+version: "2"
+
+sql:
+  # Настройка для PostgreSQL
+  - engine: "postgresql"
+    # Путь к директории с SQL-запросами
+    queries: "sql/queries"
+    # Путь к файлам миграций/схемы БД
+    schema: "sql/schema"
+    gen:
+      go:
+        # Название пакета сгенерированного кода
+        package: "queries"
+        # Выходная директория для сгенерированного кода
+        out: "internal/database/queries"
+        sql_package: "pgx/v5"
