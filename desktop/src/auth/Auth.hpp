@@ -4,6 +4,7 @@ namespace jr {
 
 class Auth {
 public:
+      
 
 private:
 
